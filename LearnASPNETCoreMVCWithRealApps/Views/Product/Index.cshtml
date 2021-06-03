@@ -1,0 +1,50 @@
+﻿@{
+    Layout = null;
+}
+
+@model LearnASPNETCoreMVCWithRealApps.Models.Product
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+
+    <form asp-controller="product" asp-action="save" method="post" enctype="multipart/form-data">
+        <table cellpadding="2" cellspacing="2">
+            <tr>
+                <td>Id</td>
+                <td>
+                    <input type="text" asp-for="Id" />
+                </td>
+            </tr>
+            <tr>
+                <td>Name</td>
+                <td>
+                    <input type="text" asp-for="Name" />
+                </td>
+            </tr>
+            <tr>
+                <td>Price</td>
+                <td>
+                    <input type="text" asp-for="Price" />
+                </td>
+            </tr>
+            <tr>
+                <td>Photo</td>
+                <td>
+                    <input type="file" name="photos" multiple="multiple" />
+                </td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+                <td><input type="submit" value="Save" /></td>
+            </tr>
+        </table>
+    </form>
+
+</body>
+</html>

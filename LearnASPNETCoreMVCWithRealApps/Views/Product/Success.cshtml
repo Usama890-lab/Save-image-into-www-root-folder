@@ -1,0 +1,40 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Success</title>
+</head>
+<body>
+
+    <h3>Product Info</h3>
+    <table cellpadding="2" cellspacing="2" border="1">
+        <tr>
+            <td>Id</td>
+            <td>@ViewBag.product.Id</td>
+        </tr>
+        <tr>
+            <td>Name</td>
+            <td>@ViewBag.product.Name</td>
+        </tr>
+        <tr>
+            <td>Price</td>
+            <td>@ViewBag.product.Price</td>
+        </tr>
+        <tr>
+            <td>Photo(s)</td>
+            <td>
+                @foreach (var photo in ViewBag.product.Photos)
+                {
+                    <img src="~/images/@photo" width="120" />
+                }
+            </td>
+        </tr>
+    </table>
+
+</body>
+</html>
